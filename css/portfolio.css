@@ -11,7 +11,7 @@ html, body, li, ul, a, div, article, section, span{
 nav li{
     display: inline-block;
 }
-/* s ovime dodajem plavu crtu na home koja je duža od onih iz 1024px, jer sam dodao float
+/*S ovime dodajem plavu crtu na home koja je duža od onih iz 1024px, jer sam dodao float
 ako float obrišem ponaša se normalno no nisam uspio shvatiti vezu između toga*/
 .home{
     border-right: 5px solid #2095F3;
@@ -63,7 +63,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     border: none;
     cursor: pointer;
 }
-/* ovo definira kako će izgledati meni kada kliknem na ikonu, prvotno je skrivem*/
+/*Ovo definira kako će izgledati meni kada kliknem na ikonu, prvotno je skrivem*/
 .dropdown-content {    
     display: none;
     position: absolute;
@@ -80,7 +80,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     text-decoration: none;
     display: block;
 }
-/**Što se dešava ako preletim preko ikone za izbornik*/
+/*Što se dešava ako preletim preko ikone za izbornik*/
 .dropdown a:hover {}
 .show {
     display:block;
@@ -89,7 +89,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
 .text{
     
 }
-/* Polje Search - maknuto */
+/*Polje Search - maknuto */
 input[type=text] {
     width: 95px;
     font-family: "brandon-grotesque", sans-serif;
@@ -107,11 +107,11 @@ input[type=text] {
     position: relative;
     left:10px;
 }
-/* When the input field gets focus, change its width to 100% */
+/*When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
     width: 12%;
 }
-/*kolumne******************************************************************/
+/****************************kolumne***********************************************************/
 .contant-a{
     background-image: url(../images/Male-Fitness-Models-Background-Image1.jpg);
     background-attachment: fixed;
@@ -154,8 +154,6 @@ input[type=text]:focus {
     background-color: #EFA1A1;
 }
 .contant-d{
-   
-   
 }
 /*Grid*******************************************************************************/
 .grid-b{
