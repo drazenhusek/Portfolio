@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/portfolio.css" type="text/css">
+    <title>Portfolio</title>
+    <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+            
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+    </script>
+</head>
+<body>
+  <!-- <nav>
+        <ul class="menu-track" id="menu">
+          <li class="tooltip home"><a href="#" class="crta">Home</a><span class="tooltiptext-home">Home page is made using HTML and CSS grid</span>
+          </li>
+          <li class="display"><a href="#contant-b">About me</a></li>
+          
+          <li class="tooltip display"><a href="#">Work</a><span class="tooltiptext-work">Work is made with Bootstraps 4</span></li>
+          <li class="tooltip display"><a href="#">Blog </a><span class="tooltiptext-blog">Blog is made with WP.</span>
+          </li>
+          <li class="display"><a href="#contant-d">Contact</a></li>
+          <li class="dropdown" >
+              <a onclick="myFunction()" class="dropbtn">&#9776;</a>
+            <div id="myDropdown" class="dropdown-content">
+                    <a href="#contant-b">About me</a>
+                    <a href="#">Work</a>
+                    <a href="#">Blog </a>
+                    <a href="#contant-d">Contact</a>
+            </div>
+          </li>
+         <! <li><input type="text" name="search" placeholder="Search..."></li>
+        </ul>
+    </nav> -->
+    <section>
+      <article>
+        <div class="contant-a">
+                <nav>
+                        <ul class="menu-track" id="menu">
+                          <li class="tooltip home"><a href="#" class="crta">Home</a><span class="tooltiptext-home">Home page is made using HTML and CSS grid</span>
+                          </li>
+                          <li class="display"><a href="#contant-b">About me</a></li>
+                          
+                          <li class="tooltip display"><a href="#">Work</a><span class="tooltiptext-work">Work is made with Bootstraps 4</span></li>
+                          <li class="tooltip display"><a href="#">Blog </a><span class="tooltiptext-blog">Blog is made with WP.</span>
+                          </li>
+                          <li class="display"><a href="#contant-d">Contact</a></li>
+                          <li class="dropdown" >
+                              <a onclick="myFunction()" class="dropbtn">&#9776;</a>
+                            <div id="myDropdown" class="dropdown-content">
+                                    <a href="#contant-b">About me</a>
+                                    <a href="#">Work</a>
+                                    <a href="#">Blog </a>
+                                    <a href="#contant-d">Contact</a>
+                            </div>
+                          </li>
+                         <!-- <li><input type="text" name="search" placeholder="Search..."></li>-->
+                        </ul>
+                    </nav>
+            <div class="text">
+                <h1>Welcome to my Portfolio page</h1>
+                <p>Tražite nekoga tko će Vam izraditi modernu web stranicu?</p>
+                <p>Na prvom ste mjestu!</p>
+            </div>
+         </div>
+      </article>
+      <article>
+        <div class="contant-b" id="contant-b">
+                <div class="grid-b">
+                  <div class="box cvt">
+                      <p>My name is Dražen Hušek. 
+                          I am 28 years old and. </p>
+                      <div class="cv-btn">
+                          <button class="btn english">English CV</button>
+                          <button class="btn croatian">Croatian CV</button>
+                          <button class="btn germany">German CV</button>
+                      </div>
+                  </div>
+                  <div class="box cv">
+                          <a href="#">CV</a>
+                    </div>
+                  <div class="box its">
+                      <a href="#contant-c">IT <br> Skills </a>
+                  </div>
+                  <div class="box las">
+                        <a href="#contant-d">Language knowels</a>
+                  </div>
+                  <div class="box ots">
+                        <a href="#contant-e">Others Skills</a>
+                  </div>
+                </div>
+        </div>
+      </article>
+    </section>
+   <!--<section class="horizontal-scroll">
+      <article class="hpage">
+            <div class="contant-c" id="contant-c">
+                    <div class="grid-c">
+                        <div class="container-left">
+                                     </div>
+                        <div class="container-right">
+                                     </div>
+                        <div class="container-a">
+                            <p>HTML</p>
+                            <div class="gray">
+                                <div class="skill html">80%</div>
+                            </div>
+                        </div>
+                        <div class=container-b>
+                            <p>CSS</p>
+                            <div class="gray">
+                                <div class="skill css">70%</div>
+                            </div>
+                        </div>
+                        <div class="container-c">
+                            <p>JavaScript</p>
+                             <div class="gray">
+                                <div class="skill javascript">10%</div>
+                             </div>
+                        </div>
+                        <div class="container-d">
+                            <p>Bootstraps</p>
+                            <div class="gray">
+                             <div class="skill bootstraps">50%</div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+      </article>
+      <article class="hpage">
+            <div class="contant-d" id="contant-d">
+                    <div class="grid-c">
+                            <div class="container-left">
+                                    </div>
+                            <div class="container-right">
+                                   </div>
+                            <div class="container-a">
+                                <p>HTML</p>
+                                <div class="gray">
+                                    <div class="skill html">80%</div>
+                                </div>
+                            </div>
+                            <div class=container-b>
+                                <p>CSS</p>
+                                <div class="gray">
+                                    <div class="skill css">70%</div>
+                                </div>
+                            </div>
+                            <div class="container-c">
+                                <p>JavaScript</p>
+                                 <div class="gray">
+                                    <div class="skill javascript">10%</div>
+                                 </div>
+                            </div>
+                            <div class="container-d">
+                                <p>Bootstraps</p>
+                                <div class="gray">
+                                 <div class="skill bootstraps">50%</div>
+                                </div>
+                            </div>
+                        </div>
+              </div>
+      </article>
+      <article class="hpage">
+            <div class="contant-d" id="contant-e">
+                    <div class="grid-c">
+                            <div class="container-left">
+                                  </div>
+                            <div class="container-right">
+                                    </div>
+                            <div class="container-a">
+                                <p>HTML</p>
+                                <div class="gray">
+                                    <div class="skill html">80%</div>
+                                </div>
+                            </div>
+                            <div class=container-b>
+                                <p>CSS</p>
+                                <div class="gray">
+                                    <div class="skill css">70%</div>
+                                </div>
+                            </div>
+                            <div class="container-c">
+                                <p>JavaScript</p>
+                                 <div class="gray">
+                                    <div class="skill javascript">10%</div>
+                                 </div>
+                            </div>
+                            <div class="container-d">
+                                <p>Bootstraps</p>
+                                <div class="gray">
+                                 <div class="skill bootstraps">50%</div>
+                                </div>
+                            </div>
+                        </div>
+              </div>
+      </article>
+    </section>-->
+    <section class="slideshow-container">
+        <article class="mySlides fade">
+                <div class="contant-c" id="contant-c">
+                        <div class="grid-c">
+                            <div class="container-a">
+                                <p>HTML</p>
+                                <div class="gray">
+                                    <div class="skill html">80%</div>
+                                </div>
+                            </div>
+                            <div class=container-b>
+                                <p>CSS</p>
+                                <div class="gray">
+                                    <div class="skill css">70%</div>
+                                </div>
+                            </div>
+                            <div class="container-c">
+                                <p>JavaScript</p>
+                                 <div class="gray">
+                                    <div class="skill javascript">10%</div>
+                                 </div>
+                            </div>
+                            <div class="container-d">
+                                <p>Bootstraps</p>
+                                <div class="gray">
+                                 <div class="skill bootstraps">50%</div>
+                                </div>
+                            </div>
+                         <!-- <div class="box angular">Angular</div>-->
+                        </div>
+                  </div>
+
+        </article>
+        <article class="mySlides fade">
+                <div class="contant-c" id="contant-d">
+                        <div class="grid-c">
+                            <div class="container-a">
+                                <p>HTML</p>
+                                <div class="gray">
+                                    <div class="skill html">10%</div>
+                                </div>
+                            </div>
+                            <div class=container-b>
+                                <p>CSS</p>
+                                <div class="gray">
+                                    <div class="skill css">10%</div>
+                                </div>
+                            </div>
+                            <div class="container-c">
+                                <p>JavaScript</p>
+                                 <div class="gray">
+                                    <div class="skill javascript">90%</div>
+                                 </div>
+                            </div>
+                            <div class="container-d">
+                                <p>Bootstraps</p>
+                                <div class="gray">
+                                 <div class="skill bootstraps">10%</div>
+                                </div>
+                            </div>
+                         <!-- <div class="box angular">Angular</div>-->
+                        </div>
+                  </div>
+    
+        </article>
+        <article class="mySlides fade">
+                <div class="contant-c" id="contant-e">
+                        <div class="grid-c">
+                            <div class="container-a">
+                                <p>HTML</p>
+                                <div class="gray">
+                                    <div class="skill html">10%</div>
+                                </div>
+                            </div>
+                            <div class=container-b>
+                                <p>CSS</p>
+                                <div class="gray">
+                                    <div class="skill css">80%</div>
+                                </div>
+                            </div>
+                            <div class="container-c">
+                                <p>JavaScript</p>
+                                 <div class="gray">
+                                    <div class="skill javascript">80%</div>
+                                 </div>
+                            </div>
+                            <div class="container-d">
+                                <p>Bootstraps</p>
+                                <div class="gray">
+                                 <div class="skill bootstraps">80%</div>
+                                </div>
+                            </div>
+                         <!-- div class="box angular">Angular</div>-->
+                        </div>
+                  </div>
+        </article>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+    <div class="dotts">
+          <div class="dot" onclick="currentSlide(1)"></div> 
+          <div class="dot" onclick="currentSlide(2)"></div> 
+          <div class="dot" onclick="currentSlide(3)"></div> 
+    </div>
+<section>
+        <article>
+                <div class="contant-b" id="contant-b">
+                        <div class="grid-b">
+                          <div class="box cvt">
+                              <p>My name is Dražen Hušek. 
+                                  I am 28 years old and. </p>
+                              <div class="cv-btn">
+                                  <button class="btn english">English CV</button>
+                                  <button class="btn croatian">Croatian CV</button>
+                                  <button class="btn germany">German CV</button>
+                              </div>
+                          </div>
+                          <div class="box cv">
+                                  <a href="#">CV</a>
+                            </div>
+                          <div class="box its">
+                              <a href="#contant-c">IT <br> Skills </a>
+                          </div>
+                          <div class="box las">
+                                <a href="#contant-d">Language knowels</a>
+                          </div>
+                          <div class="box ots">
+                                <a href="#contant-e">Others Skills</a>
+                          </div>
+                        </div>
+                </div>
+              </article>
+</section>
+</body>
+<script src="js/slideshow.js">
+    </script>
+</html>
