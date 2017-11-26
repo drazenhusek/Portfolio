@@ -119,7 +119,7 @@ input[type=text]:focus {
     background-size: 100%;
     background-position: 0% 30%; 
     height: 700px;
-    max-width: 100%;
+    max-width: 50%;
     background-size: cover;
 }
 .contant-a h1{
