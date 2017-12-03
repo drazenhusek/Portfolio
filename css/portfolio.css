@@ -89,28 +89,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
 .text{
     
 }
-/*Polje Search - maknuto */
-input[type=text] {
-    width: 95px;
-    font-family: "brandon-grotesque", sans-serif;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('search.png');
-    background-size: 20px;
-    background-position: 5px 5px; 
-    background-repeat: no-repeat;
-    padding: 5px 10px 5px 35px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    position: relative;
-    left:10px;
-}
-/*When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-    width: 12%;
-}
+
 /****************************kolumne***********************************************************/
 .contant-a{
     background-image: url(../images/Male-Fitness-Models-Background-Image1.jpg);
@@ -424,6 +403,9 @@ input[type=text]:focus {
   }
 .dotts{
     text-align: center;
+    padding: 10px;
+  background-color: #6DA6EA;
+
 }
 .active, .dot:hover {
     background-color: #717171;
@@ -443,7 +425,91 @@ input[type=text]:focus {
     from {opacity: .4} 
     to {opacity: 1}
   }
+/*Contract forma*/
+.contract-form{
+    margin:40px;
+}
+.grid-d{
+    display: grid;
+    grid-template: repeat(7, 1fr);
+    grid-template-areas: 
+    "fhea"
+    "fnam"
+    "fema"
+    "flan"
+    "ftxt"
+    "fche"
+    "fsub";
+    grid-gap: 10px;
+    height: 400px;
+    text-align: center;
+    margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+    margin-right: auto;
+    float: none !important;
+}
+.grid-d h4{
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.input-size{
+    width:300px;
+}
+.form{
+    display: none;
+}
+.form-head{
+    grid-area: fhea;
 
+}
+.form-name{
+    grid-area: fnam;
+  
+}
+.form-lastname{
+    grid-area: flan;
+}
+.form-email{
+    grid-area: fema;
+}
+.form-text{
+    grid-area: ftxt;
+}
+.form-check{
+    grid-area: fche;
+}
+.option{
+    display:inline-block;
+}
+.form-submit{
+    grid-area: fsub;
+}
+
+/*Footer*/
+footer{
+    margin-top:100px; 
+    height: 200px;
+}
+.copy, .logo{
+   text-align: center;
+}
+.copy a{
+    text-decoration: none;
+    color: #717171;
+}
+.copy a:hover{
+    color: #6DA6EA;
+}
+.logo a:active{
+    position: relative;
+    right: 1px;
+    top: 1px;
+}
 
 
 /*************************Resposive design*************************************/
@@ -497,9 +563,64 @@ input[type=text]:focus {
         height: 200px;
         width: 100%;
     }
+}
+
+@media (min-width:700px) {    /*Contract forma*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(7, 1fr) / repeat(1, 1fr);
+        grid-template-areas: 
+        "fhea"
+        "fnam"
+        "flan"
+        "fema"
+        "ftxt"
+        "fche"
+        "fsub";
+        grid-gap: 10px;
+        margin: 5px;
+        height: 400px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+    }
+    .form{
+        display: inline;
+        padding: 20px;
+    }
+    .spacing{
+        padding: 10px;
+    }
+    .form-head{
+        grid-area: fhea;
+    }
+    .form-name{
+        grid-area: fnam;
+    }
+    .form-lastname{
+        grid-area: flan;
+    }
+    .form-email{
+        grid-area: fema;
+    }
+    .form-text{
+        grid-area: ftxt;
+    }
+    .form-check{
+        grid-area: fche;
+    }
+    .option{
+        display: inline;
+    }
+    .form-submit{
+        grid-area: fsub;
+    }
     /*Footer*/
     footer{
-      height: 50px;
+      height: 100px;
+      margin-top:150px; 
     }
     .logo{
         padding-right: 20px;
@@ -528,7 +649,7 @@ input[type=text]:focus {
         top:1px;
     }
 }
-    @media (min-width: 1024px) {
+@media (min-width: 1024px) {
         .contant-b{
             background-color: #F4F2F2;
             margin-bottom:0;
@@ -626,49 +747,4 @@ input[type=text]:focus {
         transition: all 2s ease;
         padding-left: 40px;
     }
-}
-/*Contract forma*/
-.form{
-    height: 400px;
-    text-align: center;
-    display: block;
-}
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-/*Footer*/
-footer{
-    height: 100px;
-}
-.copy, .logo{
-   text-align: center;
-}
-.copy a{
-    text-decoration: none;
-    color: #717171;
-}
-.copy a:hover{
-    color: #6DA6EA;
-}
-.logo a:active{
-    position: relative;
-    right: 1px;
-    top: 1px;
 }
