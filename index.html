@@ -314,67 +314,55 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
+
     <div class="dotts">
           <div class="dot" onclick="currentSlide(1)"></div> 
           <div class="dot" onclick="currentSlide(2)"></div> 
           <div class="dot" onclick="currentSlide(3)"></div> 
     </div>
 <section>
-        <article>
-                <div class="contant-b" id="contant-b">
-                        <div class="grid-b">
-                          <div class="box cvt">
-                              <p>My name is Dražen Hušek. 
-                                  I am 28 years old and. </p>
-                              <div class="cv-btn">
-                                  <button class="btn english">English CV</button>
-                                  <button class="btn croatian">Croatian CV</button>
-                                  <button class="btn germany">German CV</button>
-                              </div>
-                          </div>
-                          <div class="box cv">
-                                  <a href="#">CV</a>
-                            </div>
-                          <div class="box its">
-                              <a href="#contant-c">IT <br> Skills </a>
-                          </div>
-                          <div class="box las">
-                                <a href="#contant-d">Language knowels</a>
-                          </div>
-                          <div class="box ots">
-                                <a href="#contant-e">Others Skills</a>
-                          </div>
-                        </div>
-                </div>
-              </article>
-</section>
-<section>
-    <div class="form">
-        <h4>Contact my</h4>
-        <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <article class="contract-form">
+        <div class="grid-d">
+        <div class="form-head">
+         <label for="form">Contract my</label>
+        </div>
+        <div class="form-name">
+            <label for="form" class="form">Name</label>
+            <input claas=" input-size" type="text" placeholder="Name..">
+        </div>
+        <div class="form-lastname">
+            <label claas=" input-size" for="form" class="form">Last name</label>
+            <input type="text">
+        </div>
+        <div class="form-email">
+            <label claas=" input-size" for="form" class="form">Email adress</label>
+            <input type="text">     
+        </div>
+        <div class="form-text">
+            <label for="form"></label>
+            <textarea>Some text...</textarea>
+        </div>
+        <div class="form-check">
+                <h4>Purpose of contracting my:</h4>
         
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-          
-            <input type="submit" value="Submit">
-          </form>
-    </div>
+                <label for="form" claas="spacing">Job offer</label>
+                <input type="checkbox" name="Job offer" id="">
+                <label for="form" claas="spacing">Web site development</label>
+                <input type="checkbox" name="Web site development" id="" claas="check-spacing">
+                
+        </div>  
+        <div class="form-submit">
+                <button>Submit</button>
+        </div>
+        </div>
+    </article>
 </section>
 <footer>
     <div class="copy">
-        <p>&copy; 2017 <a href="#">Hušek Dražen</a> All Rights Reserved</p>
+       <p>&copy; 2017 <a href="#">Hušek Dražen</a> All Rights Reserved</p>
     </div>
     <div class="logo">
-       <a href=""> <img src="images/github-logo.png" alt="logo_pictures" width="100px"></a>
+       <a href=""><img src="images/github-logo.png" alt="logo_pictures" width="90px"></a>
     </div>
 </footer>
 </body>
