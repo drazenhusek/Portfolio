@@ -428,48 +428,77 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
 /*Contract forma*/
 .contract-form{
     margin:40px;
-}
+}/*Izrada grida za formu*/
 .grid-d{
     display: grid;
-    grid-template: repeat(7, 1fr);
+    grid-template: repeat(8, 2fr);
     grid-template-areas: 
-    "fhea"
-    "fnam"
-    "fema"
-    "flan"
-    "ftxt"
-    "fche"
-    "fsub";
-    grid-gap: 10px;
-    height: 400px;
+    "fhea fhea"
+    "fnam fnam"
+    "fema fema"
+    "flan flan"
+    "ftxt ftxt"
+    "fche fche"
+    "fjob fsite"
+    "fsub fsub";
+    grid-gap: 20px 0px;
+    height: 550px;
     text-align: center;
     margin-left: auto;  /*centriranje na sredinu cijelog grida*/
     margin-right: auto;
     float: none !important;
-}
+}/*Uređenje teksta iznad checboxova*/
 .grid-d h4{
     margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-}
+}/*Uređenje input boxova*/
 input[type=text] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-}
-.input-size{
+    border-radius: 4px;
+    border: 1px solid #ccc;
     width:300px;
+}
+input{
+    padding-left: 20px;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:20px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
+input {
+    padding-right:10px;
+}
+textarea{
+    max-width: 300px;
+    max-height: 150px;
+    min-height: 130px;
+    min-width: 250px;
+}
+.submit{
+    padding:10px;
+    width: 150px;
+    border-radius: 4px;
+    border: 1px solid #6DA6EA;
+}
+.submit:hover{
+    background-color: #2196F3;
 }
 .form{
     display: none;
 }
 .form-head{
     grid-area: fhea;
-
 }
 .form-name{
     grid-area: fnam;
-  
 }
 .form-lastname{
     grid-area: flan;
@@ -488,6 +517,14 @@ input[type=text] {
 }
 .form-submit{
     grid-area: fsub;
+}
+.form-job{
+    grid-area: fjob;
+    width: 100%;
+}
+.form-site{
+    grid-area: fsite;
+    width: 100%;
 }
 
 /*Footer*/
@@ -568,18 +605,19 @@ footer{
 @media (min-width:700px) {    /*Contract forma*/
     .grid-d{
         display: grid;
-        grid-template: repeat(7, 1fr) / repeat(1, 1fr);
+        grid-template: repeat(8, 1fr) / repeat(2, 1fr);
         grid-template-areas: 
-        "fhea"
-        "fnam"
-        "flan"
-        "fema"
-        "ftxt"
-        "fche"
-        "fsub";
+        "fhea fhea"
+        "fnam fnam"
+        "flan flan"
+        "fema fema"
+        "ftxt ftxt"
+        "fche fche"
+        "fjob fsite"
+        "fsub fsub";
         grid-gap: 10px;
         margin: 5px;
-        height: 400px;
+        height: 500px;
         text-align: center;
         grid-gap: 10px;
         margin-left: auto;  /*centriranje na sredinu cijelog grida*/
@@ -587,8 +625,9 @@ footer{
         float: none !important;
     }
     .form{
-        display: inline;
+        display: inline-block;
         padding: 20px;
+        text-align: left;
     }
     .spacing{
         padding: 10px;
@@ -746,5 +785,37 @@ footer{
     .copy{
         transition: all 2s ease;
         padding-left: 40px;
+    }
+    /*Povečanje input boxova*/
+    input[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width:500px;
+        transition-duration: 1s;
+    }
+    /*Ponašanje grida forme*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+        grid-template-areas: 
+        "fhea fhea fhea fhea"
+        "fnam fnam fnam fnam"
+        "flan flan flan flan"
+        "fema fema fema fema"
+        "ftxt ftxt ftxt ftxt"
+        "fche fche fche fche"
+        ". fjob fsite ."
+        "fsub fsub fsub fsub";
+        grid-gap: 10px;
+        margin: 50px;
+        height: 500px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+        transition-duration:2s; 
     }
 }
