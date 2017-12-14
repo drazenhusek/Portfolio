@@ -192,7 +192,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .cv a{
     display: table-cell;
@@ -204,7 +204,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .its:hover, .las:hover, .ots:hover, .cv:hover {
     background: #0b7dda;
@@ -219,7 +219,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .las a{
     display: table-cell;
@@ -231,7 +231,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .ots a{
     display: table-cell;
@@ -275,7 +275,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     left: 50%;
     margin-left: -60px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 .tooltip .tooltiptext-blog::after, .tooltip .tooltiptext-home::after, .tooltip .tooltiptext-work::after {
     content: " ";
@@ -305,7 +305,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     right:820px;
     top: 50px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 .tooltiptext-work{
     text-transform: inherit;
@@ -321,7 +321,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
     right:440px;
     top: 50px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 /*********************** Grid C podjele za Skillove******************************************************/
 .grid-c{
@@ -404,8 +404,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
 .dotts{
     text-align: center;
     padding: 10px;
-  background-color: #6DA6EA;
-
+    background-color: #6DA6EA;
 }
 .active, .dot:hover {
     background-color: #717171;
@@ -464,7 +463,7 @@ input{
     padding-left: 20px;
 }
 input[type=text]:focus {
-    border: 3px solid #555;
+    border: 1px solid #555;
 }
 label {
     width:180px;
@@ -779,11 +778,11 @@ footer{
     }
     /*footer*/
     .logo{
-        transition: all 2s ease;
+        transition: all 0.2s ease;
         padding-right: 40px;
     }
     .copy{
-        transition: all 2s ease;
+        transition: all 0.2s ease;
         padding-left: 40px;
     }
     /*Povečanje input boxova*/
@@ -793,7 +792,7 @@ footer{
         border-radius: 4px;
         border: 1px solid #ccc;
         width:500px;
-        transition-duration: 1s;
+        transition-duration: 0.2s;
     }
     /*Ponašanje grida forme*/
     .grid-d{
@@ -816,6 +815,6 @@ footer{
         margin-left: auto;  /*centriranje na sredinu cijelog grida*/
         margin-right: auto;
         float: none !important;
-        transition-duration:2s; 
+        transition-duration:0s; 
     }
 }
