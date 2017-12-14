@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     box-sizing: border-box;
     margin:0;
@@ -818,3 +819,826 @@ footer{
         transition-duration:0s; 
     }
 }
+=======
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html, body, li, ul, a, div, article, section, span{
+    margin: 0;
+    padding: 0;
+}
+/*Izrada nav bara*/
+nav li{
+    display: inline-block;
+}
+/*S ovime dodajem plavu crtu na home koja je duža od onih iz 1024px, jer sam dodao float
+ako float obrišem ponaša se normalno no nisam uspio shvatiti vezu između toga*/
+.home{
+    border-right: 5px solid #2095F3;
+    float:left;
+}
+.menu-track a{
+    padding: 40px;
+    text-decoration: none;
+    color: #646060;
+    font-family: "brandon-grotesque", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+nav ul{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+li a:hover{
+    color: #C6C2C2;
+}
+.display {
+    display: none;
+}
+/**************************Padajući izbornik*****************************/
+
+/* Ovo je style gumba za manje ekrane s paddingom sam namjestio plavu border
+jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauzima više
+*/
+
+/*Što se dešava ako preletim preko ikone, pozeleni*/
+.dropbtn:hover, .dropbtn:focus {
+   /* background-color: #3e8e41;*/
+}
+/* ovdje sam stavio float tako da cijeli li element s klasom dropdown gurnem desno*/
+.dropdown {
+    float: right;
+    display: inline-block;
+    border-left: 5px solid #2095F3;
+    position: relative;
+    z-index: 10;
+}
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+/*Ovo definira kako će izgledati meni kada kliknem na ikonu, prvotno je skrivem*/
+.dropdown-content {    
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #634C4C;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*Što se dešava ako preletim preko ikone za izbornik*/
+.dropdown a:hover {}
+.show {
+    display:block;
+}
+/*Tekst kako da se ponaša na mobitelu*/
+.text{
+    
+}
+
+/****************************kolumne***********************************************************/
+.contant-a{
+    background-image: url(../images/Male-Fitness-Models-Background-Image1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0% 30%; 
+    height: 700px;
+    max-width: 100%;
+    background-size: cover;
+}
+.contant-a h1{
+    color: #C6C2C2;
+    font-family: "brandon-grotesque", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    top:250px;
+    margin: 0;
+}
+.contant-a p, span{
+    color: #C6C2C2;
+    font-family: "brandon-grotesque", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 300px;
+    margin-top: 5px;
+}
+.contant-b{
+    background-color: #F4F2F2;
+   /* min-height: 700px;*/
+   /* margin: 50px 0px;  /*Ovo stavlja razmak između idućeg sloja*/
+   margin-bottom: 50px;
+}
+.contant-c{
+    background-color: #EFA1A1;
+}
+.contant-d{
+}
+/*Grid*******************************************************************************/
+.grid-b{
+        display: grid;
+        grid-template-columns: 1fr;
+        /*grid-template: 400px 200px / 1fr;*/
+        grid-template-areas: 
+        "cvt"
+        "cv" 
+        "its"
+        "las"
+        "ots";
+        grid-gap: 10px;
+        /**********************600px*/
+        /*margin-left: auto;  /*centriranje na sredinu cijelog grida*
+        margin-right: auto;
+        float: none !important;
+        position: relative;*/
+}
+.cvt{
+    grid-area:cvt;
+    overflow: none;
+    grid-area: 1fr;
+    min-width: 500px;
+}
+.grid-b a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "brandon-grotesque", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #F8F4F4;
+}
+.cvt p{
+    line-height: 50px;
+    padding: 40px 120px 20px 120px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "brandon-grotesque", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #353131;
+}
+/*************KOLUMNE ČETIRI U DVA REDA*************************************************************/
+.cv, .its, .las, .ots{
+    justify-self: center;
+    width: 80%;
+} 
+.cv{
+    height: 100px;
+    grid-area:cv;
+    background-color: #6DA6EA;
+    display: table;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+.cv a{
+    display: table-cell;
+    vertical-align: middle;
+}
+.its{
+    height: 100px;
+    grid-area:its;
+    background-color: #6DA6EA;
+    display: table;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+.its:hover, .las:hover, .ots:hover, .cv:hover {
+    background: #0b7dda;
+   }
+.its a{
+    display: table-cell;
+    vertical-align: middle;
+}
+.las{
+    height: 100px;
+    grid-area:las;
+    background-color: #6DA6EA;
+    display: table;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+.las a{
+    display: table-cell;
+    vertical-align: middle;
+}
+.ots{
+    height: 100px;
+    grid-area:ots;
+    background-color: #6DA6EA;
+    display: table;
+    transition-timing-function: ease-in;
+    transition: 1s;
+}
+.ots a{
+    display: table-cell;
+    vertical-align: middle;
+}
+/******************GUMBI ZA pdf jezike*****************************************/
+.cv-btn{
+    display: table;
+    margin: 0 auto;
+}
+.btn{
+    border: none;
+    color: white;
+    padding: 12px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.english {background-color: #4CAF50;} /* Green */
+.english:hover {background-color: #46a049;}
+
+.croatian {background-color: #2196F3;} /* Blue */
+.croatian:hover {background: #0b7dda;}
+
+.germany {background-color: #ff9800;} /* Orange */
+.germany:hover {background: #e68a00;}
+
+/******************** Dodavanje tooltipova na naslovnu traku************************************/
+.tooltip .tooltiptext-blog {
+    text-transform: inherit;
+    visibility: hidden;
+    background-color: #555;
+    color: #F8F4F4;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 16px;
+    position: absolute;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    line-height: 20px;
+    transition: opacity 2s;
+}
+.tooltip .tooltiptext-blog::after, .tooltip .tooltiptext-home::after, .tooltip .tooltiptext-work::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:#6DA6EA transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext-blog, .tooltip:hover .tooltiptext-home, .tooltip:hover .tooltiptext-work {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltiptext-home{
+    text-transform: inherit;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #F8F4F4;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 16px;
+    position: absolute;
+    right:820px;
+    top: 50px;
+    line-height: 20px;
+    transition: opacity 2s;
+}
+.tooltiptext-work{
+    text-transform: inherit;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #F8F4F4;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 16px;
+    position: absolute;
+    right:440px;
+    top: 50px;
+    line-height: 20px;
+    transition: opacity 2s;
+}
+/*********************** Grid C podjele za Skillove******************************************************/
+.grid-c{
+    display: grid;
+    grid-template-rows: repeat(4, 100px); /**********************600px*/
+    grid-template-areas: 
+        "container-a"
+        "container-b" 
+        "container-c"
+        "container-d";
+    grid-gap: 5px;
+    padding: 50px 50px 40px 50px;
+}
+.gray {
+    background-color: #ddd;
+    width: 100%;
+  }
+.container-a{
+    grid-area: container-a;
+}
+.container-b{
+    grid-area: container-b;
+}
+.container-c{
+    grid-area: container-c;
+}
+.container-d{
+    grid-area: container-d;
+}
+.skill{
+        text-align: right;
+        padding-right: 20px;
+        line-height: 40px;
+        color: white;
+}
+.html {width: 80%; background-color: #4CAF50;}
+.css {width: 70%; background-color: #2196F3;}
+.javascript {width: 20%; background-color: #f44336;}
+.bootstraps {width: 50%; background-color: #808080;}
+
+/*Horizontalno scrollanje*/
+
+/*****************************SLIDE SHOW**************************************/
+.slideshow-container{
+    width: 100%;
+    position: relative;
+}
+.mySlides{
+    display: none;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+.dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+.dotts{
+    text-align: center;
+    padding: 10px;
+  background-color: #6DA6EA;
+
+}
+.active, .dot:hover {
+    background-color: #717171;
+  }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+/*Contract forma*/
+.contract-form{
+    margin:40px;
+}/*Izrada grida za formu*/
+.grid-d{
+    display: grid;
+    grid-template: repeat(8, 2fr);
+    grid-template-areas: 
+    "fhea fhea"
+    "fnam fnam"
+    "fema fema"
+    "flan flan"
+    "ftxt ftxt"
+    "fche fche"
+    "fjob fsite"
+    "fsub fsub";
+    grid-gap: 20px 0px;
+    height: 550px;
+    text-align: center;
+    margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+    margin-right: auto;
+    float: none !important;
+}/*Uređenje teksta iznad checboxova*/
+.grid-d h4{
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}/*Uređenje input boxova*/
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width:300px;
+}
+input{
+    padding-left: 20px;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:20px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
+input {
+    padding-right:10px;
+}
+textarea{
+    max-width: 300px;
+    max-height: 150px;
+    min-height: 130px;
+    min-width: 250px;
+}
+.submit{
+    padding:10px;
+    width: 150px;
+    border-radius: 4px;
+    border: 1px solid #6DA6EA;
+}
+.submit:hover{
+    background-color: #2196F3;
+}
+.form{
+    display: none;
+}
+.form-head{
+    grid-area: fhea;
+}
+.form-name{
+    grid-area: fnam;
+}
+.form-lastname{
+    grid-area: flan;
+}
+.form-email{
+    grid-area: fema;
+}
+.form-text{
+    grid-area: ftxt;
+}
+.form-check{
+    grid-area: fche;
+}
+.option{
+    display:inline-block;
+}
+.form-submit{
+    grid-area: fsub;
+}
+.form-job{
+    grid-area: fjob;
+    width: 100%;
+}
+.form-site{
+    grid-area: fsite;
+    width: 100%;
+}
+
+/*Footer*/
+footer{
+    margin-top:100px; 
+    height: 200px;
+}
+.copy, .logo{
+   text-align: center;
+}
+.copy a{
+    text-decoration: none;
+    color: #717171;
+}
+.copy a:hover{
+    color: #6DA6EA;
+}
+.logo a:active{
+    position: relative;
+    right: 1px;
+    top: 1px;
+}
+
+
+/*************************Resposive design*************************************/
+@media (min-width:700px) {
+    .contant-b{
+        background-color: #F4F2F2;
+        margin-bottom:0;
+    }
+    .prev, .next{
+        padding: 15px;
+    }
+    .grid-c{
+        display: grid;
+        grid-template-rows: repeat(4, 100px);
+        height: 100%;  /**********************600px*/
+        grid-template-areas: 
+            "container-a"
+            "container-b" 
+            "container-c"
+            "container-d" ;
+        padding: 90px 100px 70px 100px;
+        grid-gap: 5px;
+    }
+    .grid-b{
+        display: grid;
+        grid-template: 1fr 1fr / repeat(4, 1fr);
+        grid-template-areas: 
+        "cvt cvt cvt cvt"
+        "cv its las ots";
+        grid-gap: 10px 10px;
+        /**********************600px*/
+        padding: 20px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+    }
+    .btn{
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .cvt p{
+        font-size: 22px;
+    }
+    /*Pošto na malom ekranu su sadržaji boxovi ovi dolje ccentrirani i na 80%
+    Ovim dolje ih stavljam na 100%*/
+    .cv, .its, .las, .ots{
+        height: 200px;
+        width: 100%;
+    }
+}
+
+@media (min-width:700px) {    /*Contract forma*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(8, 1fr) / repeat(2, 1fr);
+        grid-template-areas: 
+        "fhea fhea"
+        "fnam fnam"
+        "flan flan"
+        "fema fema"
+        "ftxt ftxt"
+        "fche fche"
+        "fjob fsite"
+        "fsub fsub";
+        grid-gap: 10px;
+        margin: 5px;
+        height: 500px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+    }
+    .form{
+        display: inline-block;
+        padding: 20px;
+        text-align: left;
+    }
+    .spacing{
+        padding: 10px;
+    }
+    .form-head{
+        grid-area: fhea;
+    }
+    .form-name{
+        grid-area: fnam;
+    }
+    .form-lastname{
+        grid-area: flan;
+    }
+    .form-email{
+        grid-area: fema;
+    }
+    .form-text{
+        grid-area: ftxt;
+    }
+    .form-check{
+        grid-area: fche;
+    }
+    .option{
+        display: inline;
+    }
+    .form-submit{
+        grid-area: fsub;
+    }
+    /*Footer*/
+    footer{
+      height: 100px;
+      margin-top:150px; 
+    }
+    .logo{
+        padding-right: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        float: right;
+    }
+    .copy{
+        padding-left: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        float: left;
+    }
+    .copy a{
+        text-decoration: none;
+        color: #717171;
+    }
+    .copy a:hover{
+        color: #6DA6EA;
+    }
+    .logo a:active{
+        position: relative;
+        right:1px;
+        top:1px;
+    }
+}
+@media (min-width: 1024px) {
+        .contant-b{
+            background-color: #F4F2F2;
+            margin-bottom:0;
+        }
+        .prev, .next{
+            padding: 15px;
+        }
+        .grid-c{
+            display: grid;
+            grid-template-rows: repeat(4, 100px);
+            height: 100%;
+            width: 100%;  /**********************600px*/
+            grid-template-areas: 
+                "container-a"
+                "container-b" 
+                "container-c"
+                "container-d" ;
+            padding: 90px 200px 70px 200px;
+            grid-gap: 5px;
+        }
+        .grid-b{
+            display: grid;
+            grid-template: 1fr 1fr / repeat(5, 1fr);
+            grid-template-areas: 
+            "cvt cvt cvt cv its"
+            "cvt cvt cvt las ots";
+            grid-gap: 20px 20px;
+              /**********************600px*/
+            max-width: 1280px;
+            padding: 20px;
+            margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+            margin-right: auto;
+            float: none !important;
+        }
+    .btn{
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .cvt p{
+        font-size: 22px;
+    }
+    .cv, .its, .las, .ots{
+        height: 220px;
+        width: 100%;
+    }
+    nav li{
+        display: inline;
+        border-left: 5px solid #2196F3;
+    }
+    /*ovo moram dodati da ne ostane priljepljen lijevo kako sam definirao prvotno za mobitel*/
+    nav .home{
+        float: none;
+        border-right: 0px solid #2095F3;
+    }
+    /*Postavke kako će izgledati glavni izbornik na 1024px*/
+    .menu-track a{
+        padding: 40px;
+        text-decoration: none;
+        color: #646060;
+        font-family: "brandon-grotesque", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    nav ul{
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    li a:hover{
+        color: #C6C2C2;
+    }
+    /*S klasom display govorim meniju da nakon 1024px prikaže elemete NAV-a*/
+    .display {
+        display: inline;
+    }
+    /*Sakrivam hamburger izbornik za manje uređaje*/
+    .dropdown, .line{
+        display: none;
+    }
+    /*footer*/
+    .logo{
+        transition: all 2s ease;
+        padding-right: 40px;
+    }
+    .copy{
+        transition: all 2s ease;
+        padding-left: 40px;
+    }
+    /*Povečanje input boxova*/
+    input[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width:500px;
+        transition-duration: 1s;
+    }
+    /*Ponašanje grida forme*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+        grid-template-areas: 
+        "fhea fhea fhea fhea"
+        "fnam fnam fnam fnam"
+        "flan flan flan flan"
+        "fema fema fema fema"
+        "ftxt ftxt ftxt ftxt"
+        "fche fche fche fche"
+        ". fjob fsite ."
+        "fsub fsub fsub fsub";
+        grid-gap: 10px;
+        margin: 50px;
+        height: 500px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+        transition-duration:2s; 
+    }
+}
+>>>>>>> githubkid/master
