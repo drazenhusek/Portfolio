@@ -119,7 +119,7 @@ input[type=text]:focus {
     background-size: 100%;
     background-position: 0% 30%; 
     height: 700px;
-    max-width: 50%;
+    max-width: 100%;
     background-size: cover;
 }
 .contant-a h1{
@@ -473,7 +473,7 @@ input[type=text]:focus {
         grid-template-areas: 
         "cvt cvt cvt cvt"
         "cv its las ots";
-        grid-gap: 20px 20px;
+        grid-gap: 10px 10px;
         /**********************600px*/
         padding: 20px;
         margin-left: auto;  /*centriranje na sredinu cijelog grida*/
@@ -497,6 +497,37 @@ input[type=text]:focus {
         height: 200px;
         width: 100%;
     }
+    /*Footer*/
+    footer{
+      height: 50px;
+    }
+    .logo{
+        padding-right: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        float: right;
+    }
+    .copy{
+        padding-left: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        float: left;
+    }
+    .copy a{
+        text-decoration: none;
+        color: #717171;
+    }
+    .copy a:hover{
+        color: #6DA6EA;
+    }
+    .logo a:active{
+        position: relative;
+        right:1px;
+        top:1px;
+    }
+}
     @media (min-width: 1024px) {
         .contant-b{
             background-color: #F4F2F2;
@@ -508,7 +539,8 @@ input[type=text]:focus {
         .grid-c{
             display: grid;
             grid-template-rows: repeat(4, 100px);
-            height: 100%;  /**********************600px*/
+            height: 100%;
+            width: 100%;  /**********************600px*/
             grid-template-areas: 
                 "container-a"
                 "container-b" 
@@ -530,7 +562,7 @@ input[type=text]:focus {
             margin-left: auto;  /*centriranje na sredinu cijelog grida*/
             margin-right: auto;
             float: none !important;
-    }
+        }
     .btn{
         border: none;
         color: white;
@@ -585,6 +617,58 @@ input[type=text]:focus {
     .dropdown, .line{
         display: none;
     }
+    /*footer*/
+    .logo{
+        transition: all 2s ease;
+        padding-right: 40px;
+    }
+    .copy{
+        transition: all 2s ease;
+        padding-left: 40px;
+    }
 }
+/*Contract forma*/
+.form{
+    height: 400px;
+    text-align: center;
+    display: block;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*Footer*/
+footer{
+    height: 100px;
+}
+.copy, .logo{
+   text-align: center;
+}
+.copy a{
+    text-decoration: none;
+    color: #717171;
+}
+.copy a:hover{
+    color: #6DA6EA;
+}
+.logo a:active{
+    position: relative;
+    right: 1px;
+    top: 1px;
+}
