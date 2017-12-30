@@ -89,28 +89,7 @@ jer inaće je puno veći jer valjda po defaltu hamburger izbornik ili ikona zauz
 .text{
     
 }
-/*Polje Search - maknuto */
-input[type=text] {
-    width: 95px;
-    font-family: "brandon-grotesque", sans-serif;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('search.png');
-    background-size: 20px;
-    background-position: 5px 5px; 
-    background-repeat: no-repeat;
-    padding: 5px 10px 5px 35px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    position: relative;
-    left:10px;
-}
-/*When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-    width: 12%;
-}
+
 /****************************kolumne***********************************************************/
 .contant-a{
     background-image: url(../images/Male-Fitness-Models-Background-Image1.jpg);
@@ -213,7 +192,7 @@ input[type=text]:focus {
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .cv a{
     display: table-cell;
@@ -225,7 +204,7 @@ input[type=text]:focus {
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .its:hover, .las:hover, .ots:hover, .cv:hover {
     background: #0b7dda;
@@ -240,7 +219,7 @@ input[type=text]:focus {
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .las a{
     display: table-cell;
@@ -252,7 +231,7 @@ input[type=text]:focus {
     background-color: #6DA6EA;
     display: table;
     transition-timing-function: ease-in;
-    transition: 1s;
+    transition: 0.3s;
 }
 .ots a{
     display: table-cell;
@@ -296,7 +275,7 @@ input[type=text]:focus {
     left: 50%;
     margin-left: -60px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 .tooltip .tooltiptext-blog::after, .tooltip .tooltiptext-home::after, .tooltip .tooltiptext-work::after {
     content: " ";
@@ -326,7 +305,7 @@ input[type=text]:focus {
     right:820px;
     top: 50px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 .tooltiptext-work{
     text-transform: inherit;
@@ -342,7 +321,7 @@ input[type=text]:focus {
     right:440px;
     top: 50px;
     line-height: 20px;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 /*********************** Grid C podjele za Skillove******************************************************/
 .grid-c{
@@ -424,6 +403,8 @@ input[type=text]:focus {
   }
 .dotts{
     text-align: center;
+    padding: 10px;
+    background-color: #6DA6EA;
 }
 .active, .dot:hover {
     background-color: #717171;
@@ -443,7 +424,128 @@ input[type=text]:focus {
     from {opacity: .4} 
     to {opacity: 1}
   }
+/*Contract forma*/
+.contract-form{
+    margin:40px;
+}/*Izrada grida za formu*/
+.grid-d{
+    display: grid;
+    grid-template: repeat(8, 2fr);
+    grid-template-areas: 
+    "fhea fhea"
+    "fnam fnam"
+    "fema fema"
+    "flan flan"
+    "ftxt ftxt"
+    "fche fche"
+    "fjob fsite"
+    "fsub fsub";
+    grid-gap: 20px 0px;
+    height: 550px;
+    text-align: center;
+    margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+    margin-right: auto;
+    float: none !important;
+}/*Uređenje teksta iznad checboxova*/
+.grid-d h4{
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}/*Uređenje input boxova*/
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width:300px;
+}
+input{
+    padding-left: 20px;
+}
+input[type=text]:focus {
+    border: 1px solid #555;
+}
+label {
+    width:180px;
+    clear:left;
+    text-align:right;
+    padding-right:20px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
+input {
+    padding-right:10px;
+}
+textarea{
+    max-width: 300px;
+    max-height: 150px;
+    min-height: 130px;
+    min-width: 250px;
+}
+.submit{
+    padding:10px;
+    width: 150px;
+    border-radius: 4px;
+    border: 1px solid #6DA6EA;
+}
+.submit:hover{
+    background-color: #2196F3;
+}
+.form{
+    display: none;
+}
+.form-head{
+    grid-area: fhea;
+}
+.form-name{
+    grid-area: fnam;
+}
+.form-lastname{
+    grid-area: flan;
+}
+.form-email{
+    grid-area: fema;
+}
+.form-text{
+    grid-area: ftxt;
+}
+.form-check{
+    grid-area: fche;
+}
+.option{
+    display:inline-block;
+}
+.form-submit{
+    grid-area: fsub;
+}
+.form-job{
+    grid-area: fjob;
+    width: 100%;
+}
+.form-site{
+    grid-area: fsite;
+    width: 100%;
+}
 
+/*Footer*/
+footer{
+    margin-top:100px; 
+    height: 200px;
+}
+.copy, .logo{
+   text-align: center;
+}
+.copy a{
+    text-decoration: none;
+    color: #717171;
+}
+.copy a:hover{
+    color: #6DA6EA;
+}
+.logo a:active{
+    position: relative;
+    right: 1px;
+    top: 1px;
+}
 
 
 /*************************Resposive design*************************************/
@@ -497,9 +599,66 @@ input[type=text]:focus {
         height: 200px;
         width: 100%;
     }
+}
+
+@media (min-width:700px) {    /*Contract forma*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(8, 1fr) / repeat(2, 1fr);
+        grid-template-areas: 
+        "fhea fhea"
+        "fnam fnam"
+        "flan flan"
+        "fema fema"
+        "ftxt ftxt"
+        "fche fche"
+        "fjob fsite"
+        "fsub fsub";
+        grid-gap: 10px;
+        margin: 5px;
+        height: 500px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+    }
+    .form{
+        display: inline-block;
+        padding: 20px;
+        text-align: left;
+    }
+    .spacing{
+        padding: 10px;
+    }
+    .form-head{
+        grid-area: fhea;
+    }
+    .form-name{
+        grid-area: fnam;
+    }
+    .form-lastname{
+        grid-area: flan;
+    }
+    .form-email{
+        grid-area: fema;
+    }
+    .form-text{
+        grid-area: ftxt;
+    }
+    .form-check{
+        grid-area: fche;
+    }
+    .option{
+        display: inline;
+    }
+    .form-submit{
+        grid-area: fsub;
+    }
     /*Footer*/
     footer{
-      height: 50px;
+      height: 100px;
+      margin-top:150px; 
     }
     .logo{
         padding-right: 20px;
@@ -528,7 +687,7 @@ input[type=text]:focus {
         top:1px;
     }
 }
-    @media (min-width: 1024px) {
+@media (min-width: 1024px) {
         .contant-b{
             background-color: #F4F2F2;
             margin-bottom:0;
@@ -619,56 +778,43 @@ input[type=text]:focus {
     }
     /*footer*/
     .logo{
-        transition: all 2s ease;
+        transition: all 0.2s ease;
         padding-right: 40px;
     }
     .copy{
-        transition: all 2s ease;
+        transition: all 0.2s ease;
         padding-left: 40px;
     }
-}
-/*Contract forma*/
-.form{
-    height: 400px;
-    text-align: center;
-    display: block;
-}
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-/*Footer*/
-footer{
-    height: 100px;
-}
-.copy, .logo{
-   text-align: center;
-}
-.copy a{
-    text-decoration: none;
-    color: #717171;
-}
-.copy a:hover{
-    color: #6DA6EA;
-}
-.logo a:active{
-    position: relative;
-    right: 1px;
-    top: 1px;
+    /*Povečanje input boxova*/
+    input[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width:500px;
+        transition-duration: 0.2s;
+    }
+    /*Ponašanje grida forme*/
+    .grid-d{
+        display: grid;
+        grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+        grid-template-areas: 
+        "fhea fhea fhea fhea"
+        "fnam fnam fnam fnam"
+        "flan flan flan flan"
+        "fema fema fema fema"
+        "ftxt ftxt ftxt ftxt"
+        "fche fche fche fche"
+        ". fjob fsite ."
+        "fsub fsub fsub fsub";
+        grid-gap: 10px;
+        margin: 50px;
+        height: 500px;
+        text-align: center;
+        grid-gap: 10px;
+        margin-left: auto;  /*centriranje na sredinu cijelog grida*/
+        margin-right: auto;
+        float: none !important;
+        transition-duration:0s; 
+    }
 }
